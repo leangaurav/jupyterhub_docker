@@ -8,7 +8,7 @@ c.JupyterHub.hub_connect_ip = os.environ["JUPYTERHUB_CONTAINER_NAME"]
 ## jupyterhub auth settings
 admin_users = os.environ['ADMIN_USERS']
 print("Admin Users", admin_users)
-admin_users_set = set([s.strip() for s in admin_users.split(',')])
+admin_users_set = set(filter(len, map(str.strip, admin_users.split(','))))
 print("Admin Users Set", admin_users_set)
 
 c.JupyterHub.authenticator_class = "oauthenticator.LocalGitHubOAuthenticator"
