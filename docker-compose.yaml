@@ -17,7 +17,7 @@ services:
       OAUTH_CLIENT_ID:
       OAUTH_CLIENT_SECRET:
     ports:
-      - 80:80
+      - "${JUPYTERHUB_PORT}:${JUPYTERHUB_PORT}"
     volumes:
       - "${JUPYTERHUB_DATA}:${JUPYTERHUB_DATA}"
       - ${JUPYTERHUB_WORKSPACE}:/home
