@@ -20,5 +20,5 @@ services:
       - "${JUPYTERHUB_PORT}:${JUPYTERHUB_PORT}"
     volumes:
       - "${JUPYTERHUB_DATA}:${JUPYTERHUB_DATA}"
-      - ${JUPYTERHUB_WORKSPACE}:/home
+      - ${JUPYTERHUB_USERS_HOME}:/home
     restart: "always"
