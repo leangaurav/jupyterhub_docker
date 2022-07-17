@@ -1,0 +1,14 @@
+# jupyter server deps
+oauthenticator
+jupyter
+
+# additional libraries
+#matplotlib
+#numba
+numpy
+pandas
+#protobuf
+#scikit-image
+#scikit-learn
+#scipy
+seaborn
