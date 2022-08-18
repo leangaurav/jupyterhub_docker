@@ -21,10 +21,10 @@ services:
     volumes:
       - "${JUPYTERHUB_DATA}:${JUPYTERHUB_DATA}"
       - ${JUPYTERHUB_USERS_HOME}:/home
-    networks:
-      - nginx_https_docker_app
     restart: always
+#    networks: # uncomment this section when doing https setup
+#      - nginx_https_docker_app
 
-networks:
-  nginx_https_docker_app:
-    external: true
+#networks:
+#  nginx_https_docker_app:
+#    external: true
