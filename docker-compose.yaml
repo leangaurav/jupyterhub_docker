@@ -16,15 +16,8 @@ services:
       OAUTH_CALLBACK_URL:
       OAUTH_CLIENT_ID:
       OAUTH_CLIENT_SECRET:
-    ports:
-      - "${JUPYTERHUB_PORT}:${JUPYTERHUB_PORT}"
     volumes:
       - "${JUPYTERHUB_DATA}:${JUPYTERHUB_DATA}"
       - ${JUPYTERHUB_USERS_HOME}:/home
+    network_mode: host
     restart: always
-#    networks: # uncomment this section when doing https setup
-#      - nginx_https_docker_app
-
-#networks:
-#  nginx_https_docker_app:
-#    external: true
