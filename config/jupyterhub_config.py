@@ -3,7 +3,7 @@ import os
 ## set public interface
 c.JupyterHub.ip = os.environ["JUPYTERHUB_IP"]
 c.JupyterHub.port = int(os.environ["JUPYTERHUB_PORT"])
-c.JupyterHub.hub_connect_ip = os.environ["JUPYTERHUB_CONTAINER_NAME"]
+c.JupyterHub.hub_connect_ip = os.environ["JUPYTERHUB_IP"]
 
 ## jupyterhub auth settings
 admin_users = os.environ['ADMIN_USERS']
